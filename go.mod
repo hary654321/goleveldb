@@ -1,4 +1,4 @@
-module github.com/syndtr/goleveldb
+module github.com/hary654321/goleveldb
 
 go 1.14
 
