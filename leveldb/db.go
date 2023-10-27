@@ -931,6 +931,7 @@ func (db *DB) GetSnapshot() (*Snapshot, error) {
 // GetProperty returns value of the given property name.
 //
 // Property names:
+//
 //	leveldb.num-files-at-level{n}
 //		Returns the number of files at level 'n'.
 //	leveldb.stats
@@ -1168,6 +1169,7 @@ func (db *DB) SizeOf(ranges []util.Range) (Sizes, error) {
 // It is valid to call Close multiple times. Other methods should not be
 // called after the DB has been closed.
 func (db *DB) Close() error {
+	return nil
 	if !db.setClosed() {
 		return ErrClosed
 	}
